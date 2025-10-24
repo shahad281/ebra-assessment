@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: ebra_backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: ebra_db
+      PORT: 3000
+    volumes:
+      - .:/usr/src/app
+    command: npx ts-node-dev src/app.ts
+
+  postgres:
+    image: postgres:16
+    container_name: ebra_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ebra_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+
