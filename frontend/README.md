@@ -12,8 +12,8 @@ Features:
 Getting Started:
 
 Install dependencies
-cd frontend
-npm install
-npm run dev
+- cd frontend
+- npm install
+- npm run dev
 
 
