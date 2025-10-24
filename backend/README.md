@@ -21,10 +21,10 @@ Tech Stack:
 
 - Node.js + Express.js Backend framework
 - PostgreSQL Database running inside a Docker container
--Docker & Docker Compose Container orchestration
--TypeScript Type-safe development
--Postman API testing
--Fake AI Provider Simulation Random status updates to mock external provider behavior
+- Docker and Docker Compose Container orchestration
+- TypeScript Typesafe development
+- Postman API testing
+- Fake AI Provider Simulation Random status updates to mock external provider behavior
 
 How to Run the Project
 Run with Docker Compose From the project backend root directory, run: docker-compose up --build
